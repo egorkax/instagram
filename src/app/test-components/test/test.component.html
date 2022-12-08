@@ -1,0 +1,12 @@
+<div>
+  <div *ngFor="let el of fruits; even as even; odd as odd">
+    <h3 [ngClass]="{ even: even, odd: !even }">name:{{ el.name }}--price:{{ el.price }}</h3>
+  </div>
+  <hr />
+  <hr />
+  <div *ngFor="let el of fruits">
+    <h3 *ngIf="el.price > 10" [ngClass]="{ even: el.price > 50 }">
+      name:{{ el.name }}--price:{{ el.price }}
+    </h3>
+  </div>
+</div>
