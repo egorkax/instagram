@@ -1,26 +1,19 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
 
-import { AppComponent } from './app.component';
-import {Test1Component} from "./test1/test1.component";
-import { Test2Component } from './test2/test2.component';
-import { Test3Component } from './test3/test3.component';
-import { Test5Component } from './components/user/test5/test5.component';
-import { Test6Component } from './test6/test6.component';
+import { AppComponent } from './app.component'
+import { FormsModule } from '@angular/forms'
+import { TestComponent } from './test-components/test/test.component'
+import { PipeComponent } from './test-components/pipe/pipe.component'
+import { ParentComponent } from './test-components/parent/parent.component'
+import { ChildComponent } from './test-components/parent/child/child.component';
+import { CompAComponent } from './comp-b/comp-a/comp-a.component';
+import { CompBComponent } from './comp-b/comp-b.component'
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    Test1Component,
-    Test2Component,
-    Test3Component,
-    Test5Component,
-    Test6Component
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, ParentComponent, ChildComponent, TestComponent, PipeComponent, CompAComponent, CompBComponent],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
